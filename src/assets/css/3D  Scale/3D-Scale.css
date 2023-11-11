@@ -1,0 +1,42 @@
+
+
+/**3D SCALE TRANSITION IN THE INSIGHT TABS */
+@keyframes scaleIn{
+  from{
+    transform: scale3d(0, 0,0);
+  }
+  to{
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+
+.slide-in{
+  animation: scaleIn 1s ease-in-out;
+  animation-fill-mode: backwards;
+  animation-delay: 0s;
+  transform-origin: center center;
+
+
+}
+
+/*SMOOTH FADE-IN ON PAGE ENTER ANIMATION */
+
+.fade-in-home,
+.fade-in-career,
+.main-container ,
+main{
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

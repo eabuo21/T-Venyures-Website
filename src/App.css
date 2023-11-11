@@ -1,0 +1,171 @@
+/* Teams page */
+.avatar-container {
+  position: relative;
+}
+
+.avatar-container:hover .overlay-teams {
+  height: 10rem;
+}
+
+.teams-cancel {
+  margin-top: -200px;
+  margin-right: -30px;
+}
+
+.teams-close {
+  /* min-height: 50vh; */
+  border-radius: 0.8rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.24);
+}
+.teams-open {
+  min-height: 300px;
+  /* min-height: 50vh; */
+  border-radius: 0.8rem;
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.24); */
+}
+
+.teams-open:hover {
+  border: 1px solid red;
+}
+
+.writters-open {
+  min-height: 50vh;
+  border-radius: 0.8rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.24);
+}
+
+.planCard {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+
+/*SMOOTH FADE-IN ON PAGE ENTER ANIMATION */
+
+.main,
+.form-container {
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/**3D SCALE TRANSITION IN THE forms TABS */
+
+@keyframes scaleIn {
+  from {
+    transform: scale3d(0, 0, 0);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.form-container {
+  animation: scaleIn 1s ease-in-out;
+  animation-fill-mode: backwards;
+  animation-delay: 0s;
+  transform-origin: bottom center;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale3d(0, 0, 0);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.terms-container {
+  animation: scaleIn 1s ease-in-out;
+  animation-fill-mode: backwards;
+  animation-delay: 0s;
+  transform-origin: top right;
+}
+
+.apply-form,
+.form-container {
+  z-index: 2147483647;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/**
+custom styling for dots
+**/
+.custom-dot {
+  width: 10px;
+  height: 10px;
+  border: 2px solid gold;
+  border-radius: 50%;
+  margin: 0 5px;
+
+}
+
+/*loader text styling*/
+
+.loader-container > .loader-text-main{
+  font-family: cursive;
+}
+
+/**Custom dropdown**/
+
+.custom-dropdown {
+  position: relative;
+  width: 45%;
+
+}
+
+.dropdown-header {
+  cursor: pointer;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #F5AD32;
+  border-radius: 8px;
+
+}
+
+.dropdown-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  max-height: 150px; /* Adjust the max height as needed */
+  overflow-y: auto;
+}
+
+.dropdown-option {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-option:hover {
+  background-color: blue;
+  color: white;
+}
+
+.dropdown-option.selected {
+  background-color: #DC0404;
+  color: #fff;
+}
+
+.dropdown-icon {
+  transition: transform 0.3s ease;
+margin-left: auto;
+}
+
+.rotated {
+  transform: rotate(180deg);
+}
